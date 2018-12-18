@@ -1,0 +1,124 @@
+.content{
+    text-align: center;
+    margin: 30px;
+}
+
+.secret-word {
+    color: #ffffff;
+    display: inline-block;
+    padding: 0px 0px;
+    border-style: solid;
+    margin: 1px;
+    font-size: 65px;
+    border-radius: 15px;
+    border-color: #8cb2d4;
+    background: #478eda;
+    width: 80px;
+}
+
+.space {
+    color: #ffffff;
+    display: inline-block;
+    padding: 0px 0px;
+    border-style: solid;
+    margin: 1px;
+    font-size: 65px;
+    border-radius: 15px;
+    border-color: #ffffff;
+    width: 50px;
+}
+
+.secret-letter{
+    color: #26498a;
+    display: inline-block;
+    padding: 0px 0px;
+    border-style: solid;
+    margin: 1px;
+    font-size: 65px;
+    border-radius: 15px;
+    border-color: #8cb2d4;
+    background: #26498a;
+    width: 80px;
+}
+
+.show-letter{
+    color: #ffffff;
+    display: inline-block;
+    padding: 0px 0px;
+    border-style: solid;
+    margin: 1px;
+    font-size: 65px;
+    border-radius: 15px;
+    border-color: #8cb2d4;
+    background: #26498a;
+    width: 80px;
+}
+
+.words{
+    display: -webkit-inline-box;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.input-tns {
+    border-radius: 5px;
+    border-color: #ced4d9;
+    border-width: 1px;
+    border-style: solid;
+    height: 38px;
+    width: 50%;
+    padding-left: 13px;
+    margin: 0px 15px;
+}
+
+.form-group-tns{
+    display: flex;
+    justify-content: center;
+}
+
+.secondary-button {
+    background-color: #73378e !important;
+    color: white !important;
+    margin: 15px;
+}
+
+.primary-button {
+    background-color: rgb(0, 166, 188) !important;
+    color: white !important;
+    margin: 15px;
+}
+.cancel-button{
+    background-color: #df1468 !important;
+    color: white !important;
+}
+
+.input-check-word{
+    border-radius: 5px;
+    border-color: #ced4d9;
+    border-width: 1px;
+    border-style: solid;
+    height: 38px;
+    width: 7%;
+    margin: 15px;
+    text-align: center;
+    font-size: 30px;
+}
+.container-tns{
+    margin-top:50px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-btn{
+    display: flex;
+    float: right;
+    margin-bottom: 5px;
+}
+
