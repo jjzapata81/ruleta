@@ -21,10 +21,14 @@
 		{{timeCounter}}
 	  </div>
 
-      <div class="container-btn" *ngIf="!timeIsActive">
-		  <button class="btn primary-button" type="button" id="btn0" (click)="adivinar()">Adivinar</button>
-          <button class="btn primary-button" type="button" id="btn1" (click)="revelar()">Revelar</button>
-          <button class="btn secondary-button" type="button" id="btn2" (click)="reiniciar()">Nuevo juego</button>
+      <div *ngIf="!timeIsActive" class="container-btn">
+        <button class="btn primary-button" type="button" id="btn0" (click)="adivinar()">Adivinar</button>
+            <button class="btn primary-button" type="button" id="btn1" (click)="revelar()">Revelar</button>
+            <button class="btn secondary-button" type="button" id="btn2" (click)="reiniciar()">Nuevo juego</button>
+            <button class="btn secondary-button" type="button" id="btn0" (click)="cuentaAtras()">
+                <span *ngIf="!setDownCounter">Cuenta atr&aacute;s</span>
+                <span *ngIf="setDownCounter">Pausar</span>
+            </button>
       </div>
   </div>
 </div>

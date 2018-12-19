@@ -5,6 +5,9 @@ import { Word, Letter } from '../interfaces/interfaz';
   providedIn: 'root'
 })
 export class RuletaService {
+
+  copyOfWords : Word[] = [];
+
   revelate(word:Word[]) {
     for (let entry of word) {
       for(let letter of entry.letter){
@@ -16,6 +19,7 @@ export class RuletaService {
   constructor() { }
 
   getWord(word:string): Word[] {
+    this.copyOfWords = [];
     var words : Word[] = [];
     var wordSplited = word.split(' ');
     for (let entry of wordSplited) {
@@ -30,7 +34,17 @@ export class RuletaService {
       letters.push(new Letter(' ', 'space'));
       words.push(new Word(letters));
     }
+    this.copyOfWords = Object.assign([], words);
     return words;
+  }
+
+  getRamdomWord():number{
+    var position = Math.round(Math.random()*(this.copyOfWords.length-1));
+    var randomWord = this.copyOfWords[position];
+    if(randomWord.letter.length > 0){
+      return position;
+    }
+    return -1;
   }
 
   countLetters(word:string):number{
@@ -42,6 +56,5 @@ export class RuletaService {
     }
     return letters;
   }
-
   
 }
