@@ -47,6 +47,16 @@ export class RuletaService {
     return -1;
   }
 
+  getRandomLetter():number{
+    var position = this.getRamdomWord();
+    if(position>-1){
+      var randomWord = this.copyOfWords[position];
+      var letterPosition = Math.round(Math.random()*(randomWord.letter.length-1));
+      var randomLetter = randomWord.letter[letterPosition];
+    }
+    return -1;
+  }
+
   countLetters(word:string):number{
     var letters:number = 0;
     for (let letter of word.split('')){
