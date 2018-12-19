@@ -21,7 +21,11 @@ export class RuletaService {
     for (let entry of wordSplited) {
       var letters : Letter[] = [];
       for(let letter of entry.split('')){
-        letters.push(new Letter(letter.toUpperCase(), 'secret-letter'));
+		if(letter === ','){
+			letters.push(new Letter(letter.toUpperCase(), 'show-letter'));
+		}else{
+			letters.push(new Letter(letter.toUpperCase(), 'secret-letter'));
+		}
       }
       letters.push(new Letter(' ', 'space'));
       words.push(new Word(letters));
@@ -32,7 +36,7 @@ export class RuletaService {
   countLetters(word:string):number{
     var letters:number = 0;
     for (let letter of word.split('')){
-      if(letter!=' '){
+      if(letter!=' ' && letter!=','){
         letters++;
       }
     }

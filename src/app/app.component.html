@@ -12,14 +12,17 @@
               </div>
             </div>
       </div>
-      <div>
+      <div class="container-check" *ngIf="!timeIsActive">
           <input type="text" class="input-check-word" [(ngModel)]="wordToCheck" maxlength="1" />
           <br/>
           <button class="btn cancel-button" type="button" (click)="cambiar()">Verificar</button>
       </div>
+	  <div *ngIf="showTimer" class="timer-counter">
+		{{timeCounter}}
+	  </div>
 
-
-      <div class="container-btn">
+      <div class="container-btn" *ngIf="!timeIsActive">
+		  <button class="btn primary-button" type="button" id="btn0" (click)="adivinar()">Adivinar</button>
           <button class="btn primary-button" type="button" id="btn1" (click)="revelar()">Revelar</button>
           <button class="btn secondary-button" type="button" id="btn2" (click)="reiniciar()">Nuevo juego</button>
       </div>
